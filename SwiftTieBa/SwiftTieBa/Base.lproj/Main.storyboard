@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--百度贴吧-->
+        <!--View Controller-->
         <scene sceneID="5xZ-x0-3w4">
             <objects>
                 <tableViewController id="ZX2-gD-ID7" customClass="ViewController" customModule="SwiftTieBa" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,9 +196,26 @@
                             <outlet property="delegate" destination="ZX2-gD-ID7" id="EfQ-BU-bGR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="百度贴吧" id="mz0-eV-zkg"/>
+                    <navigationItem key="navigationItem" id="mz0-eV-zkg">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="freshButton" destination="0dr-1g-Lwa" id="bhU-2b-IuK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P08-O4-EEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0dr-1g-Lwa">
+                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="pic_icon_fresh" backgroundImage="pic_fresh_n">
+                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="ZX2-gD-ID7" eventType="touchUpInside" id="zZ5-Rw-3hj"/>
+                    </connections>
+                </button>
             </objects>
             <point key="canvasLocation" x="1216" y="197"/>
         </scene>
@@ -224,6 +241,8 @@
     <resources>
         <image name="ico_people" width="15" height="19"/>
         <image name="ico_reply" width="15" height="19"/>
+        <image name="pic_fresh_n" width="58" height="58"/>
+        <image name="pic_icon_fresh" width="58" height="58"/>
         <image name="pic_plank_among" width="320" height="5"/>
         <image name="pic_plank_down" width="320" height="33"/>
         <image name="pic_plank_up" width="320" height="5"/>
