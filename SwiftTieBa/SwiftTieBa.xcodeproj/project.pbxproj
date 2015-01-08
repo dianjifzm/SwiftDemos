@@ -12,6 +12,7 @@
 		CE6B3C251A5DCF6E00A276FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6B3C231A5DCF6E00A276FC /* Main.storyboard */; };
 		CE6B3C271A5DCF6E00A276FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6B3C261A5DCF6E00A276FC /* Images.xcassets */; };
 		CE6B3C361A5DCF6F00A276FC /* SwiftTieBaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B3C351A5DCF6F00A276FC /* SwiftTieBaTests.swift */; };
+		CEA6A6391A5F016F005F821C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A6381A5F016F005F821C /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		CE6B3C2F1A5DCF6F00A276FC /* SwiftTieBaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTieBaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6B3C341A5DCF6F00A276FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6B3C351A5DCF6F00A276FC /* SwiftTieBaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTieBaTests.swift; sourceTree = "<group>"; };
+		CEA6A6381A5F016F005F821C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				CE6B3C231A5DCF6E00A276FC /* Main.storyboard */,
 				CE6B3C261A5DCF6E00A276FC /* Images.xcassets */,
 				CE6B3C1D1A5DCF6E00A276FC /* Supporting Files */,
+				CEA6A6381A5F016F005F821C /* Common.swift */,
 			);
 			path = SwiftTieBa;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6B3C221A5DCF6E00A276FC /* ViewController.swift in Sources */,
+				CEA6A6391A5F016F005F821C /* Common.swift in Sources */,
 				CE6B3C201A5DCF6E00A276FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				CE6B3C3B1A5DCF6F00A276FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE6B3C3C1A5DCF6F00A276FC /* Build configuration list for PBXNativeTarget "SwiftTieBaTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				CE6B3C3E1A5DCF6F00A276FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
