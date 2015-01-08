@@ -8,17 +8,18 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController {
     
     @IBOutlet var freshButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
     var data:[[String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "pic_background")!)
-        self.refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
-        
+        self.tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         freshButton.center = CGPointMake(285, view.frame.size.height - 58 - 40)
         view.addSubview(freshButton)
     }
@@ -46,17 +47,23 @@ class ViewController: UITableViewController {
         var formatter = NSDateFormatter()
         formatter.dateFormat = "MMM d, h:mm a"
         var title = "Last update: \(formatter.stringFromDate(NSDate()))"
-        refreshControl?.attributedTitle =  NSAttributedString(string: title);
+        refreshControl.attributedTitle =  NSAttributedString(string: title);
         tableView.reloadData()
-        refreshControl?.endRefreshing()
+        refreshControl.endRefreshing()
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+}
+
+extension ViewController : UITableViewDataSource,UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 50
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if data.count <= indexPath.row {
             data.append([randomName(),randomAnswerCountStr(),randomStr()])
         }
@@ -66,7 +73,7 @@ class ViewController: UITableViewController {
         return  CGFloat(15 * line + 110)
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("TieBaCell", forIndexPath: indexPath) as UITableViewCell
         cell.backgroundColor = UIColor(patternImage: UIImage(named: "pic_background")!)
         
