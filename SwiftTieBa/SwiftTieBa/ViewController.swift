@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "pic_background")!)
         self.tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
-        freshButton.center = CGPointMake(285, view.frame.size.height - 58 - 40)
+        freshButton.center = CGPointMake(285, view.frame.size.height - 58 + 20)
         view.addSubview(freshButton)
     }
     

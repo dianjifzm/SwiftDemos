@@ -84,7 +84,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CENTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwW-zM-PRk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CENTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwW-zM-PRk">
                                                     <constraints>
                                                         <constraint firstAttribute="height" id="Jcp-cq-4xf"/>
                                                         <constraint firstAttribute="width" constant="20" id="UaF-oj-Udv"/>
@@ -176,6 +176,12 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="0yN-YO-AaA"/>
+                                                    <exclude reference="2UH-tm-fKB"/>
+                                                    <exclude reference="GLG-Lh-S2U"/>
+                                                    <exclude reference="aPt-yX-0Ne"/>
+                                                    <exclude reference="dkg-50-eEQ"/>
+                                                    <exclude reference="sJp-Ac-MqI"/>
                                                     <exclude reference="Inz-zE-vh8"/>
                                                     <exclude reference="oPK-Dv-h1g"/>
                                                     <exclude reference="VnA-tO-qEh"/>
@@ -185,12 +191,6 @@
                                                     <exclude reference="X9i-jM-cz4"/>
                                                     <exclude reference="3Gm-8B-IPZ"/>
                                                     <exclude reference="Ylg-rV-ZpS"/>
-                                                    <exclude reference="0yN-YO-AaA"/>
-                                                    <exclude reference="2UH-tm-fKB"/>
-                                                    <exclude reference="GLG-Lh-S2U"/>
-                                                    <exclude reference="aPt-yX-0Ne"/>
-                                                    <exclude reference="dkg-50-eEQ"/>
-                                                    <exclude reference="sJp-Ac-MqI"/>
                                                     <exclude reference="p7P-AP-TO5"/>
                                                     <exclude reference="nEf-Py-bsE"/>
                                                 </mask>
