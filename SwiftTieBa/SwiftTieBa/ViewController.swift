@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet var freshButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var refreshControl = UIRefreshControl()
+    let refreshControl = UIRefreshControl()
     var data:[[String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "pic_background")!)
-        self.tableView.addSubview(refreshControl)
+        self.tableView.insertSubview(refreshControl, atIndex: 0)//这样就不会渐变了
         refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
         freshButton.center = CGPointMake(285, view.frame.size.height - 58 + 20)
         view.addSubview(freshButton)
@@ -51,10 +51,6 @@ class ViewController: UIViewController {
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
-    
-    
-    
-    
 }
 
 extension ViewController : UITableViewDataSource,UITableViewDelegate{
@@ -68,16 +64,12 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate{
             data.append([randomName(),randomAnswerCountStr(),randomStr()])
         }
         var line = countElements(data[indexPath.row][2]) / 43 + 1
-        
-        //textView.contentSize.height
         return  CGFloat(15 * line + 110)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("TieBaCell", forIndexPath: indexPath) as UITableViewCell
         cell.backgroundColor = UIColor(patternImage: UIImage(named: "pic_background")!)
-        
-        
         
         var name = cell.viewWithTag(100) as UILabel
         var number = cell.viewWithTag(101) as UILabel
