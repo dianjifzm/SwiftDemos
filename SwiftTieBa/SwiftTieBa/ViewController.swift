@@ -43,20 +43,21 @@ class ViewController: UIViewController {
     }
     
     func refresh(){
+        refreshControl.attributedTitle =  NSAttributedString(string: "刷新中");
         sleep(1)
         var formatter = NSDateFormatter()
-        formatter.dateFormat = "MMM d, h:mm a"
-        var title = "Last update: \(formatter.stringFromDate(NSDate()))"
+        formatter.dateFormat = "MM-dd hh:mm"
+        var title = "上次刷新: \(formatter.stringFromDate(NSDate()))"
         refreshControl.attributedTitle =  NSAttributedString(string: title);
         tableView.reloadData()
         refreshControl.endRefreshing()
-    }
+    }    
 }
 
 extension ViewController : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return 10
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
